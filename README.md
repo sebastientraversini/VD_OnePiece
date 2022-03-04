@@ -4,6 +4,10 @@ Nous allons créer un jeu de données avec les cartes de l'animé à succès One
 # Description 
 Les données sont structurées en format csv avec le nombre de ligne correspondant au nombre d'îles parcourues par nos aventuriers. Pour compléter la visualisation, la deuxième colonne décrit les situations que l'équipage a rencontrées sur chaque île.
 # But
-qu'est-ce que vous voulez découvrir ? Des tendances ? Vous voulez explorer ou expliquer?
+Rendre clair le trajet de l'équipage à travers le monde et en résumant les étapes clés.
+
+Afficher une visualisation du trajet de l'équipage au travers des îles qu'il visite. 
+En fonction de ou est le curseur de l'utilisateur, les données de l'île sur laquelle on se situe s'affiche.
+des flèches retracent le trajet entre chaque île.
 # Références
-Qui d'autre dans le web ou dans la recherche a utilisé ces données ? Dans quel but ?
+https://onepiece.fandom.com/ Ce site est destiné à regrouper plein d'informations sur One Piece pour la fan base de One Piece et contient une liste des îles visitées avec des informations pour chaque île.
