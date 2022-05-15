@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+p{
+  font-size:20px;
+}
+   
+  input {
+    width:50px;
+  }
+  svg {
+    border:1px solid gray;
+    border-radius:10px;
+    margin:5px;
+    width:1400px;
+    height: 700px;
+    background-color: #c3e5f0;
+  }
+  #linechart {
+    width:800px;
+  }
+  
+  html {
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  
+  .stateMap {
+    stroke: rgb(106, 101, 101);
+    fill: rgb(184, 134, 73);
+  }
+  .stateMap .active {
+    fill: orange;
+  }
+  .stateline {
+    fill: orange;
+    stroke: black;
+    stroke-width: 2;
+  }
+  .stateSelected {
+    stroke-width:4;
+  }
+  
+  .colorLegend line{
+    stroke:white;
+    fill:grey;
+  }
+  .colorLegend .domain {
+    stroke:none;
+  }
+  
+  h2, h3 {
+    text-align:center;
+  }
+  .x_axis line, .x_axis .domain {
+    stroke:gray;
+  }
+  .axisLabel, .legendLabel {
+    font-size:20px;
+    fill:gray;
+  }
+  
+  .y_axis line {
+    stroke:gray;
+    stroke-opacity: 0.5;
+    stroke-dasharray: 5,10;
+  }
+  .y_axis text, .x_axis text {
+    fill:gray;
+    font-size:1.5em;
+  }
+  
+  #tooltip {
+    border:1px solid gray;
+    border-radius:5px;
+    background-color: white;
+    position:absolute;
+    top:30%;
+    left:30%;
+    padding:10px;
+    max-width: 700px;
+
+    height: auto;
+    
+  }
+
+  .grid line {
+    stroke:gray;
+    stroke-opacity: 0.5;
+    stroke-dasharray: 5,10;
+  }
+  
+  .grid path {
+    stroke-width: 0;
+  }
+  
+
+
+.modal {
+ 
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    transform: scale(0);
+    transition:200ms ease-in-out;
+    width: 670px;
+    height: 400px;
+    background: #FFFFFF;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 25px;
+
+    z-index: 1001;
+}
+
+.modal.active{
+  transform: scale(1);
+}
+
+.modal-header .close-button {
+ 
+cursor: pointer;
+border:none;
+outline: none;  
+background: none;
+font-size:1.5rem;
+font-weight:bold;
+}
+  
+.modal-header{
+  padding:10px 15px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title{
+  font-size:1.5rem;
+  font-weight:bold;
+}
+
+#overlay {
+  position: fixed;
+ /*  opacity: 0; */
+ top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+transition:200ms ease-in-out;
+pointer-events: none;
+}
+
+
+#overlay.active{
+  opacity: 1;
+pointer-events: all;
+}
+
+.Explainings{
+  font-size:30px;
+}
+
+#wrapper {
+    margin:auto;
+    width:1440px;
+  }
+
+
+
+    </style>
+    <meta charset='utf-8'>
+    <title>Map</title>
+    <script src='https://d3js.org/d3.v5.min.js'></script>
+    <script src='./scripts/project.js'></script>
+  </head>
+  <body>
+    <div id='wrapper'>
+      <div class="header">
+      <hr style='width:100%'>
+      
+      <h1>Map One Piece</h1>
+      <button data-modal-target="#modal" class="Explainings">Explainings</button>
+    </div>
+
+      <br/>
+      <svg id='map'></svg>
+      <div id='tooltip'></div>
+    </div>
+
+    <div class="modal" id="modal">
+ 
+          <centered>
+            <div class="modal-header">
+              <div class="title">Explications</div>
+            <button data-close-button class="close-button">&times;</button>
+
+            </div>
+              <p>This site retrace the journey of strawhat Luffy crew from the One Piece Universe.</p>
+              <p>We can see some information about each island and village in order to understand what happens on each island.</p>
+              <p> To use this map, you have to click on a island and after you can travel to the next island of the journey by clikcing on the spacebar.</p>
+              <p> to quit the following of the journey, click again on the island you are on, it will zoom out.</p>
+          </centered>
+      </div>
+ 
+  <div id="overlay"></div>
+
+  </body>
+</html>
