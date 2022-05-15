@@ -11,3 +11,8 @@ En fonction de ou est le curseur de l'utilisateur, les données de l'île sur la
 des flèches retracent le trajet entre chaque île.
 # Références
 https://onepiece.fandom.com/ Ce site est destiné à regrouper plein d'informations sur One Piece pour la fan base de One Piece et contient une liste des îles visitées avec des informations pour chaque île.
+
+# Présentation Figma
+
+https://www.figma.com/proto/rDML9UM3YZk3joay42uIuQ/VisualDon_pr%C3%A9sentation?page-id=0%3A1&node-id=4%3A432&viewport=241%2C48%2C0.11&scaling=scale-down&starting-point-node-id=1%3A2
+
