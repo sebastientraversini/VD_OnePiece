@@ -100,7 +100,6 @@ const OpenModalButtons = document.querySelectorAll('[data-modal-target]')
     });
 });
 
-// Draw the map in the #map svg
 function drawMap() {
     
 
